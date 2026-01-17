@@ -76,12 +76,15 @@ const Index = () => {
   ];
 
   const resources = [
-    { name: 'HTML Academy', url: 'https://htmlacademy.ru/', category: 'Обучение' },
-    { name: 'MDN Web Docs', url: 'https://developer.mozilla.org/', category: 'Документация' },
-    { name: 'Behance', url: 'https://www.behance.net/', category: 'Вдохновение' },
+    { name: 'Мультимедийные технологии (ИНТУИТ)', url: 'https://intuit.ru/studies/courses/658/514/info', category: 'Обучение' },
+    { name: 'Обработка медиа-контента (ИНТУИТ)', url: 'https://intuit.ru/studies/courses/634/490/info', category: 'Обучение' },
+    { name: 'Презентация курса (Google)', url: 'https://docs.google.com/presentation/d/1E7p1pU-GfaFWWwqFWBbVkBkrZUElpU7IsyVQxscpW1M/edit?slide=id.p#slide=id.p', category: 'Обучение' },
+    { name: 'Слайд — Летописи.ру', url: 'http://letopisi.ru/index.php/Слайд', category: 'Документация' },
+    { name: 'Вики — Wikibooks', url: 'https://ru.wikibooks.org/wiki/Вики', category: 'Документация' },
+    { name: 'ВикиНГПУ — Добро пожаловать', url: 'https://wiki.mininuniver.ru/index.php/Добро_пожаловать_в_ВикиНГПУ', category: 'Документация' },
+    { name: 'Обучающие олимпиады по Веб 2.0', url: 'https://wiki.mininuniver.ru/index.php/Обучающие_олимпиады_по_социальным_сервисам_Веб_2.0', category: 'Обучение' },
     { name: 'Unsplash', url: 'https://unsplash.com/', category: 'Медиа-ресурсы' },
-    { name: 'Freesound', url: 'https://freesound.org/', category: 'Медиа-ресурсы' },
-    { name: 'YouTube Creators', url: 'https://www.youtube.com/creators/', category: 'Обучение' }
+    { name: 'Freesound', url: 'https://freesound.org/', category: 'Медиа-ресурсы' }
   ];
 
   return (
@@ -217,19 +220,31 @@ const Index = () => {
                 <div className="p-6 bg-secondary/30 rounded-lg border-2 border-dashed border-primary/30">
                   <div className="flex items-center gap-2 mb-3">
                     <Icon name="Presentation" className="h-5 w-5 text-primary" />
-                    <h3 className="font-semibold">Интеграция презентации</h3>
+                    <h3 className="font-semibold">Презентация</h3>
                   </div>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Здесь можно разместить Google Презентацию или Яндекс.Презентацию через встраивание (iframe).
+                    Презентация по аппаратным средствам мультимедиа
                   </p>
-                  <div className="aspect-video bg-white rounded-lg flex items-center justify-center border">
-                    <div className="text-center p-6">
-                      <Icon name="FilePresentation" className="h-12 w-12 text-muted-foreground mx-auto mb-2" />
-                      <p className="text-sm text-muted-foreground">
-                        Вставьте код встраивания презентации
-                      </p>
-                    </div>
-                  </div>
+                  <a
+                    href="https://disk.yandex.ru/i/-qPwRm9lU7X-nQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block aspect-video bg-white rounded-lg overflow-hidden border hover:shadow-lg transition-shadow group"
+                  >
+                    <img 
+                      src="https://disk.yandex.ru/d/-qPwRm9lU7X-nQ" 
+                      alt="Презентация по аппаратным средствам"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const parent = target.parentElement;
+                        if (parent) {
+                          parent.innerHTML = `<div class="flex flex-col items-center justify-center h-full gap-2"><svg class="h-12 w-12 text-muted-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg><span class="text-sm text-muted-foreground">Открыть презентацию на Яндекс.Диске</span></div>`;
+                        }
+                      }}
+                    />
+                  </a>
                 </div>
               </CardContent>
             </Card>
