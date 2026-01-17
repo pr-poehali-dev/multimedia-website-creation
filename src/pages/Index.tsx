@@ -525,27 +525,6 @@ const Index = () => {
                       </div>
                     ))}
                   </div>
-
-                  <div className="p-6 bg-secondary/30 rounded-lg border-2 border-dashed border-primary/30">
-                    <div className="flex items-center gap-2 mb-3">
-                      <Icon name="Grid3x3" className="h-5 w-5 text-primary" />
-                      <h3 className="font-semibold">Вебмикс</h3>
-                    </div>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Для создания интерактивного каталога ресурсов можно использовать сервисы создания вебмиксов
-                      или визуальных закладок
-                    </p>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                      {[1, 2, 3, 4, 5, 6, 7, 8].map((i) => (
-                        <div
-                          key={i}
-                          className="aspect-square bg-white rounded-lg border flex items-center justify-center hover:shadow-md transition-shadow cursor-pointer"
-                        >
-                          <Icon name="Link" className="h-8 w-8 text-muted-foreground" />
-                        </div>
-                      ))}
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
