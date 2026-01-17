@@ -378,21 +378,22 @@ const Index = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  <div className="p-6 bg-secondary/30 rounded-lg border-2 border-dashed border-primary/30">
-                    <div className="flex items-center gap-2 mb-3">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-2">
                       <Icon name="Video" className="h-5 w-5 text-primary" />
                       <h3 className="font-semibold">Видеоматериал</h3>
                     </div>
-                    <p className="text-sm text-muted-foreground mb-4">
-                      Разместите здесь видео, созданное в рамках лабораторной работы
+                    <p className="text-sm text-muted-foreground">
+                      Видео, созданное в рамках лабораторной работы
                     </p>
-                    <div className="aspect-video bg-white rounded-lg flex items-center justify-center border">
-                      <div className="text-center p-6">
-                        <Icon name="Play" className="h-16 w-16 text-muted-foreground mx-auto mb-3" />
-                        <p className="text-sm text-muted-foreground">
-                          Вставьте ссылку на видео или код встраивания
-                        </p>
-                      </div>
+                    <div className="aspect-video bg-white rounded-lg overflow-hidden border shadow-sm">
+                      <iframe
+                        src="https://rutube.ru/play/embed/5a3eb5bafe32be5d76a1a4d6acfbd65e"
+                        frameBorder="0"
+                        allow="clipboard-write; autoplay"
+                        allowFullScreen
+                        className="w-full h-full"
+                      ></iframe>
                     </div>
                   </div>
 
